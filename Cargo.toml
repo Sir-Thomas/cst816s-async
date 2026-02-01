@@ -1,0 +1,29 @@
+[package]
+name = "cst816s-async"
+version = "0.1.0"
+edition = "2024"
+description = "CST816S touch controller driver for embedded hal async / no_std"
+repository = "https://github.com/Sir-Thomas/cst816s-async"
+license = "MIT OR Apache-2.0"
+categories = [
+    "embedded",
+    "hardware-support",
+    "no-std::no-alloc",
+    "asynchronous",
+]
+keywords = [
+    "embedded-hal-driver",
+    "CST816S",
+    "touchscreen",
+    "touch-controller",
+    "PineTime",
+]
+
+[dependencies]
+defmt = { version = "1.0.1", optional = true }
+embedded-graphics = { version = "0.8.1", features = ["defmt"] }
+embedded-hal = { version = "1.0.0", features = ["defmt-03"] }
+embedded-hal-async = { version = "1.0.0", features = ["defmt-03"] }
+
+[features]
+defmt = ["dep:defmt", "embedded-hal/defmt-03", "embedded-hal-async/defmt-03", "embedded-graphics/defmt"]
