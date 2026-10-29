@@ -1,6 +1,6 @@
 [package]
 name = "cst816s-async"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 description = "CST816S touch controller driver for embedded hal async / no_std"
 repository = "https://github.com/Sir-Thomas/cst816s-async"
